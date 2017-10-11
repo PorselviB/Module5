@@ -43,7 +43,8 @@ var insertProperty = function (string, propName, propValue) {
     .replace(new RegExp(propToReplace, "g"), propValue);
   return string;
 };
-
+  
+ 
 // Remove the class 'active' from home and switch to Menu button
 var switchMenuToActive = function () {
   // Remove 'active' from home button
@@ -117,10 +118,11 @@ function buildAndShowHomeHTML (categories) {
       // Hint: you need to surround the chosen category short name with something before inserting
       // it into the home html snippet.
       //
-      
-      var vrandomCategoryShortName = "'"+ "randomCategoryShortName" + "'";
-      var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml,vrandomCategoryShortName,chosenCategoryShortName);
-      console.log("homeHtmltoinsertprop"  +homeHtmlToInsertIntoMainPage);
+    
+     chosenCategoryShortName = "'" +chosenCategoryShortName+ "'";
+      console.log("chosenCategoryShortName" +chosenCategoryShortName);
+      var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml,randomCategoryShortName,chosenCategoryShortName);
+      //console.log("homeHtmltoinsertprop"  +homeHtmlToInsertIntoMainPage);
 
       // TODO: STEP 4: Insert the the produced HTML in STEP 3 into the main page
       // Use the existing insertHtml function for that purpose. Look through this code for an example
